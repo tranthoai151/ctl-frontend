@@ -22,7 +22,10 @@ import { SearchComponent } from './components/search/search.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
