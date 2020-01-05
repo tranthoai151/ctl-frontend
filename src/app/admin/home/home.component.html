@@ -1,0 +1,30 @@
+<h1>List homes</h1>
+<div class="container">
+  <div class="alert alert-warning" *ngIf='inValid'>{{message}}</div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Number Of Rooms</th>
+      <th>Address</th>
+      <th>Status</th>
+      <th>UPDATE</th>
+      <th>DELETE</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let home of homes">
+      <td>{{home.name}}</td>
+      <td>{{home.numberOfRooms}}</td>
+      <td>{{home.address}}</td>
+      <td>{{home.status}}</td>
+      <td>
+        <button type="button" class="btn btn-primary" (click)="updateHome(home.id)">Update</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger" (click)="deleteHome(home.id)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
