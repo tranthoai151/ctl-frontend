@@ -6,6 +6,7 @@
             position: relative;
             display: block;
             margin-bottom: 30px;
+            transition: all .5s ease;
             .title-box-dragon{
                 font-weight: 700;
                 position: absolute;
@@ -23,6 +24,40 @@
                     font-size: 14px;
                     margin: 0;
                 }
+            }
+            &:hover{
+                opacity: .6;
+            }
+        }
+    }
+    aside{
+        .box-aside{
+            padding-top: 15px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ebebeb;
+            border-top: 1px solid #ebebeb;
+            &:last-child{
+                border-top: 0;
+            }
+            >h2{
+                overflow-wrap: break-word;
+                font-size: 16px;
+                line-height: 1.375em;
+                color: #484848;
+                margin: 0;
+                position: relative;
+                margin-bottom: 20px;
+                >i{
+                    position: absolute;
+                    right: 5px;
+                }
+            }
+            >p{
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.28571em;
+                color: #484848;
+                margin: 0;
             }
         }
     }

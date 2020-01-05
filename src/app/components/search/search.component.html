@@ -9,7 +9,7 @@
                             <input (click)="clickOpendes()" type="text" readonly placeholder="Enter a destination or property" />
                             <ul class="destination-sub open" [hidden]="hideDestination" >
                                 <li *ngFor="let search of listhome">
-                                  <a href="#"><i class="fa fa-compass"></i> {{search.name}}</a>
+                                    <a href="#"><i class="fa fa-compass"></i> {{search.name}}</a>
                                 </li>
                             </ul>
                         </li>
