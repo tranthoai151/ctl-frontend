@@ -8,13 +8,13 @@ import { Home } from '../admin/home/home.model';
 })
 export class SearchComponent implements OnInit {
     hideDestination: boolean = true;
-    @Input() listhome:any[] = [];
+    @Input() listhome: Home[];
 
     homes: Home[];
     constructor() { }
 
     ngOnInit() {
-        console.log('search', this.listhome)
+        console.log('search', this.listhome);
     }
 
     clickOpendes() {
