@@ -15,6 +15,6 @@ export class HomeService {
   constructor(protected http: HttpClient) { }
 
   search() {
-    return this.http.get<Home[]>(`http://localhost:8080/api/homes`);
+    return this.http.get<Home[]>(`http://localhost:8080/api/admin/homes`);
   }
 }

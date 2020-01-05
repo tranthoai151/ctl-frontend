@@ -20,7 +20,7 @@ export class HomesComponent implements OnInit {
     this.loadAll();
   }
 
-  loadAll(){
+  loadAll() {
     this.homeService
       .search().subscribe(
       response => {
