@@ -3,7 +3,6 @@ import {HomeService} from '../../service/home.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {HttpErrorResponse, HttpHeaders, HttpResponse} from '@angular/common/http';
 import {Home} from './home.model';
-import {JhiParseLinks} from '../../util/parse-links.service';
 import {error} from 'util';
 
 @Component({
@@ -19,7 +18,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(
     protected homeService: HomeService,
     protected activatedRoute: ActivatedRoute,
-    protected parseLinks: JhiParseLinks,
+
     protected router: Router) {
   }
 

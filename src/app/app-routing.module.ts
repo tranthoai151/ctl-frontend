@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {HomeComponent} from './admin/home/home.component';
+import {HomeComponent} from './components/admin/home/home.component';
+import { HomesComponent } from './components/homes/homes.component';
 
 const routes: Routes = [
-  {path: 'homes', component: HomeComponent} // canActive, RouteGuarService
+  {path: 'admin/homes', component: HomeComponent}, // canActive, RouteGuarService
+  {path: 'home', component: HomesComponent}
 ];
 
 @NgModule({

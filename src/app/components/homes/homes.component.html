@@ -1,0 +1,27 @@
+<section class="home-page">
+    <div class="conatiner">
+        <div class="row">
+            <div class="col-sm-3">
+                <aside>
+    
+                </aside>
+            </div>
+            <div class="col-sm-9">
+                <div class="list-dragon-parent">
+                    <div class="row">
+                        <div class="col-sm-4" *ngFor="let home of homes">
+                            <a class="box-dragon" href="#"> 
+                                <img src="../../../assets/images/1.jpg" class="img-fluid" alt="">
+                                <div class="title-box-dragon">
+                                    <h2>{{ home.name}}</h2>
+                                    <h4>{{home.numberOfRooms}} homes</h4>
+                                </div>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
