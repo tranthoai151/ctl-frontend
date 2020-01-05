@@ -8,8 +8,12 @@ footer{
 	padding-top: 50px;
 
 	.logo-ft{
+		max-width: 120px;
 		margin-bottom: 17px;
 		margin-top: -17px;
+		>img{
+			width: 100%;
+		}
 	}
 	
 	ul{

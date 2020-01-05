@@ -5,15 +5,11 @@
                 <div class="bg-fff">
                     <ul class="destination">
                         <li>
-                            <i class="fa fa-map-marker"></i> <input type="text" readonly
+                            <i class="fa fa-map-marker"></i> <input (click)="clickOpendes()" type="text" readonly
                                 placeholder="Enter a destination or property">
-                            <ul class="destination-sub">
-                                <li><a href="#"><i class="fa fa-compass"></i> Vung Tau Melody - Vung Tau City</a></li>
-                                <li><a href="#"><i class="fa fa-compass"></i> Vung Tau Melody - Vung Tau City</a></li>
-                                <li><a href="#"><i class="fa fa-compass"></i> Vung Tau Melody - Vung Tau City</a></li>
-                                <li><a href="#"><i class="fa fa-compass"></i> Vung Tau Melody - Vung Tau City</a></li>
-                                <li><a href="#"><i class="fa fa-compass"></i> Vung Tau Melody - Vung Tau City</a></li>
-                                <li><a href="#"><i class="fa fa-compass"></i> Vung Tau Melody - Vung Tau City</a></li>
+                            <ul class="destination-sub open" *ngFor="let search of listhome" [hidden]="hideDestination">
+                                <li><a href="#"><i class="fa fa-compass"></i> {{search.name}}</a></li>
+                                
                             </ul>
                         </li>
                     </ul>

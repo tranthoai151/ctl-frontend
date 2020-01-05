@@ -11,6 +11,7 @@ import { Home } from '../admin/home/home.model';
 export class HomesComponent implements OnInit {
   homes: Home[];
 
+
   constructor(
     protected homeService: HomeService,
     protected activatedRoute: ActivatedRoute,
