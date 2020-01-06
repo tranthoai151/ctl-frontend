@@ -45,8 +45,15 @@ a{
                 >li{
                     display: inline-block;
                     margin-left: 15px;
-                    >a{
-                        color: $color;
+                    >button{
+						color: $color;
+						background: transparent;
+						border: 0;
+						padding: 0;
+						outline: none;
+						.ui-button-text{
+							display: none;
+						}
                     }
                 }
             }
