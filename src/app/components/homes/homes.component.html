@@ -7,23 +7,38 @@
                     <div class="box-aside">
                         <h2>Price range <i class="fa fa-angle-up"></i></h2>
                         <p>The average nightly price is 1,763,582₫</p>
-                        
+                        <div class="ed-range">
+                            <p-slider [(ngModel)]="rangeValues" [range]="true"></p-slider>
+                        </div>
                         <div>
-                            <span>500000₫</span> - <span>5000000+ ₫</span>
+                            <span>{{ rangeValues[0] }}₫</span> - <span>{{ rangeValues[1] }}+ ₫</span>
                         </div>
                     </div>
                     <div class="box-aside">
                         <h2>Home type <i class="fa fa-angle-up"></i></h2>
-                        <p>The average nightly price is 1,763,582₫</p>
-                        <div>
-                            <span>500000₫</span> - <span>5000000+ ₫</span>
-                        </div>
+                        <ul class="checlbox-hometype">
+                            <li>
+                                <p-checkbox name="group1" value="Entire place" label="Entire place" [(ngModel)]="selectedHomeType" inputId="ny"></p-checkbox>
+                                <p>Have a place to yourself</p>
+                            </li>
+                            <li>
+                                <p-checkbox name="group1" value="Private room" label="Private room" [(ngModel)]="selectedHomeType" inputId="ny"></p-checkbox>
+                                <p>Have your own room and share some common spaces</p>
+                            </li>
+                            <li>
+                                <p-checkbox name="group1" value="Shared room" label="Shared room" [(ngModel)]="selectedHomeType" inputId="ny"></p-checkbox>
+                                <p>Stay in a shared space, like a common room</p>
+                            </li>
+                        </ul>
                     </div>
                 </aside>
             </div>
             <div class="col-sm-9">
                 <div class="list-dragon-parent">
                     <div class="row">
+                        <div class="col-12 ">
+                            <h2 class="title-page">The Dragons's list</h2>
+                        </div>
                         <div class="col-sm-4" *ngFor="let home of homes">
                             <a class="box-dragon" href="#"> 
                                 <img src="../../../assets/images/1.jpg" class="img-fluid" alt="">

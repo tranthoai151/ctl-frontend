@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +12,11 @@ import { HomesComponent } from './components/homes/homes.component';
 import { SearchComponent } from './components/search/search.component';
 import {ButtonModule} from 'primeng/button';
 import {DialogModule} from 'primeng/dialog';
+import {PasswordModule} from 'primeng/password';
+import {InputTextModule} from 'primeng/inputtext';
+import {SliderModule} from 'primeng/slider';
+import {CheckboxModule} from 'primeng/checkbox';
+
 
 
 @NgModule({
@@ -28,7 +34,12 @@ import {DialogModule} from 'primeng/dialog';
     HttpClientModule,
     BrowserAnimationsModule,
     ButtonModule,
-    DialogModule
+    DialogModule,
+    PasswordModule,
+    InputTextModule,
+    FormsModule,
+    SliderModule,
+    CheckboxModule
 
   ],
   providers: [],
