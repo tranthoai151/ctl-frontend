@@ -9,14 +9,12 @@ type EntityArrayResponseType = HttpResponse<Home[]>;
 @Injectable({
   providedIn: 'root'
 })
-export class HomeService {
+export class AdminHomeService {
   public resourceUrl = 'http://localhost:8080/api';
 
   constructor(protected http: HttpClient) { }
 
-
-
-  search() {
-    return this.http.get<Home[]>(`http://localhost:8080/api/admin/homes`);
+  search(pageIndex, perPage) {
+    return this.http.get<ResponseData>(`http://localhost:8080/api/admin/homes/search?pageIndex=` + pageIndex + `&perPage=` + perPage);
   }
 }

@@ -10,8 +10,8 @@ import { Home } from '../admin/home/home.model';
 })
 export class HomesComponent implements OnInit {
     homes: Home[];
-    rangeValues: number[] = [10,500];
-    selectedHomeType:any[]=[];
+    rangeValues: number[] = [10, 500];
+    selectedHomeType: any[] = [];
 
 
 
@@ -36,7 +36,5 @@ export class HomesComponent implements OnInit {
                     console.log('err', error);
                 });
     }
-
-    
 
 }

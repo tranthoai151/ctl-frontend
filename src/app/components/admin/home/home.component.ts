@@ -1,9 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {HomeService} from '../../service/home.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {HttpErrorResponse, HttpHeaders, HttpResponse} from '@angular/common/http';
 import {Home} from './home.model';
 import {error} from 'util';
+import { AdminHomeService } from '../../service/home.service';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   inValid = false;
 
   constructor(
-    protected homeService: HomeService,
+    protected adminHomeService: AdminHomeService,
     protected activatedRoute: ActivatedRoute,
 
     protected router: Router) {
@@ -29,11 +29,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     throw new Error('Method not implemented.');
   }
   loadAll() {
-    this.homeService
-      .search().subscribe(
+    this.adminHomeService
+      .search(0, 200).subscribe(
       response => {
-        console.log('response', response);
-        this.homes = response;
+        console.log('response', response.data);
+        this.homes = response.data;
       },
       // tslint:disable-next-line:no-shadowed-variable
       error => {
