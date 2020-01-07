@@ -25,10 +25,27 @@
                 <div class="bg-fff">
                     <ul class="guests">
                         <li>
-                            <input type="text" readonly placeholder="Number of Guests">
+                            <input (click)="clickGuests()" type="text" readonly placeholder="Number of Guests">
                             <i class="fa fa-angle-down"></i>
-                            <ul>
-                                <li></li>
+                            <ul class="number-guests" [hidden]="hideGuests">
+                                <li>
+                                    <p>Adults</p>
+                                    <button pButton (click)="decrementAdults()" type="button" icon="pi pi-minus"></button>
+                                    <input type="text" [value]="counterValueAdults" min="0" pInputText />
+                                    <button pButton type="button" (click)="incrementAdults()" icon="pi pi-plus"></button>
+                                </li>
+                                <li>
+                                    <p>Children<br><span>Ages 2-12</span></p>
+                                    <button pButton (click)="decrementChildren()" type="button" icon="pi pi-minus"></button>
+                                    <input type="text" [value]="counterValueChildren" min="0" pInputText />
+                                    <button pButton type="button" (click)="incrementChildren()" icon="pi pi-plus"></button>
+                                </li>
+                                <li>
+                                    <p>Infants<br><span>Under 2</span></p>
+                                    <button pButton (click)="decrementInfants()" type="button" icon="pi pi-minus"></button>
+                                    <input type="text" [value]="counterValueInfants" min="0" pInputText />
+                                    <button pButton type="button" (click)="incrementInfants()" icon="pi pi-plus"></button>
+                                </li>
                             </ul>
                         </li>
                     </ul>
