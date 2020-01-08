@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpResponse} from '@angular/common/http';
 import {Home} from '../admin/home/home.model';
 import {Observable} from 'rxjs';
+import { ResponseData } from 'src/app/util/response-data.module';
 
 
 type EntityResponseType = HttpResponse<Home>;

@@ -11,7 +11,7 @@ import { AdminHomeService } from '../../service/home.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  homes: Home[];
+  homes: any;
   message: string;
   inValid = false;
 

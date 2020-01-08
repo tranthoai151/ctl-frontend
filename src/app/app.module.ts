@@ -19,6 +19,7 @@ import {CheckboxModule} from 'primeng/checkbox';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,7 @@ import {CheckboxModule} from 'primeng/checkbox';
     HeaderComponent,
     FooterComponent,
     HomesComponent,
-    SearchComponent,   
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
