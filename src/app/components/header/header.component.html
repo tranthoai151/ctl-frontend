@@ -29,7 +29,7 @@
                 <li><a href="#"><i class="fa fa-google"></i> Sign in with google</a></li>
                 <li><p>or</p></li>
             </ul>
-            <div class="form-login" >
+            <div class="form-login" [hidden]="formLogin">
                 <input id="float-input" type="text" placeholder="Email Address" pInputText> 
                 <input pPassword placeholder="Password" type="password"/>
                 <button class="btn-login" pButton type="button" label="Login" ></button>
