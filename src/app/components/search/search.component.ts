@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Home } from '../admin/home/home.model';
+import { Home } from '../admin/homes/home.model';
 
 @Component({
     selector: 'app-search',
@@ -7,15 +7,16 @@ import { Home } from '../admin/home/home.model';
     styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-    hideDestination: boolean = true;
-    hideGuests:boolean = true;
+    hideDestination: Boolean = true;
+    hideGuests: Boolean = true;
     @Input() listhome: Home[];
 
     homes: Home[];
+    counterValueAdults = 0;
+    counterValueChildren = 0;
+    counterValueInfants = 0;
     constructor() { }
-    counterValueAdults:number = 0;
-    counterValueChildren:number = 0;
-    counterValueInfants:number = 0;
+
 
     ngOnInit() {
         console.log('search', this.listhome);
@@ -35,22 +36,22 @@ export class SearchComponent implements OnInit {
             this.hideGuests = true;
         }
     }
-    incrementAdults(){
+    incrementAdults() {
         this.counterValueAdults++;
     }
-    decrementAdults(){
+    decrementAdults() {
         this.counterValueAdults--;
     }
-    incrementChildren(){
+    incrementChildren() {
         this.counterValueChildren++;
     }
-    decrementChildren(){
+    decrementChildren() {
         this.counterValueChildren--;
     }
-    incrementInfants(){
+    incrementInfants() {
         this.counterValueInfants++;
     }
-    decrementInfants(){
+    decrementInfants() {
         this.counterValueInfants--;
     }
 

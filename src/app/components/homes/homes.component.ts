@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from '../service/client/home.service';
 import { ActivatedRoute } from '@angular/router';
-import { Home } from '../admin/home/home.model';
+import { Home } from '../admin/homes/home.model';
 
 @Component({
     selector: 'app-homes',
