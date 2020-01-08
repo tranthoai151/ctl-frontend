@@ -1,0 +1,41 @@
+<div class="container">
+    <fieldset class="form-group">
+        <label>ID</label>
+        <input type="text"
+               class="form-control"
+               [(ngModel)]="home.id">
+    </fieldset>
+    <fieldset class="form-group">
+        <label>Name</label>
+        <input type="text"
+               class="form-control"
+               name="name"
+               [ngModel]="home.name"
+               required="required">
+    </fieldset>
+    <fieldset class="form-group">
+        <label>Number Of Rooms</label>
+        <input type="text"
+               class="form-control"
+               name="numberOfRooms"
+               [ngModel]="home.numberOfRooms"
+               required="required">
+    </fieldset>
+    <fieldset class="form-group">
+        <label>Name</label>
+        <input type="text"
+               class="form-control"
+               name="address"
+               [ngModel]="home.address"
+               required="required">
+    </fieldset>
+    <fieldset class="form-group">
+        <label>Name</label>
+        <input type="text"
+               class="form-control"
+               name="status"
+               [ngModel]="home.status"
+               required="required">
+    </fieldset>
+    <button class="btn btn-success">Save</button>
+</div>

@@ -10,7 +10,7 @@ import { AdminHomeService } from '../../service/home.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit {
   homes: any;
   message: string;
   inValid = false;
@@ -18,15 +18,11 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(
     protected adminHomeService: AdminHomeService,
     protected activatedRoute: ActivatedRoute,
-
     protected router: Router) {
   }
 
   ngOnInit() {
     this.loadAll();
-  }
-  ngOnDestroy(): void {
-    throw new Error('Method not implemented.');
   }
   loadAll() {
     this.adminHomeService
@@ -48,6 +44,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   updateHome(id: number) {
     console.log('updateHome == ' + id);
+    this.router.navigate(['admin/homes', id]);
   }
   deleteHome(
     id: number) {

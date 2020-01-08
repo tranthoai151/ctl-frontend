@@ -18,4 +18,8 @@ export class AdminHomeService {
   search(pageIndex, perPage) {
     return this.http.get<ResponseData>(`http://localhost:8080/api/admin/homes/search?pageIndex=` + pageIndex + `&perPage=` + perPage);
   }
+
+  getHomeById(id) {
+    return this.http.get<Home>(`http://localhost:8080/api/admin/homes/` + id );
+  }
 }

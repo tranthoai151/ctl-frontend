@@ -16,6 +16,7 @@ import {InputTextModule} from 'primeng/inputtext';
 import {SliderModule} from 'primeng/slider';
 import {CheckboxModule} from 'primeng/checkbox';
 import { HomeComponent } from './components/admin/homes/home.component';
+import { HomeDetailComponent } from './components/admin/homes/home-detail/home-detail.component';
 
 
 
@@ -28,6 +29,7 @@ import { HomeComponent } from './components/admin/homes/home.component';
     FooterComponent,
     HomesComponent,
     SearchComponent,
+    HomeDetailComponent,
   ],
   imports: [
     BrowserModule,
