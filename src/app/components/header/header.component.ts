@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   display = false ;
   selectedDateRange = null ;
-  formLogin:boolean = true;
+  formLogin = true;
   constructor() { }
 
   ngOnInit() {
